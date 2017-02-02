@@ -1,0 +1,51 @@
+package CE201;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+/**
+ * Created by jsmithaf on 30/01/2017.
+ */
+public class GUIFrame extends JFrame {
+
+    JButton btnFileOpen, temp2, temp3, temp4;
+    JPanel top, mid, bot;
+
+    public GUIFrame() {
+        top = new JPanel();
+        mid = new JPanel();
+        bot = new JPanel();
+
+        btnFileOpen = new JButton("Open File");
+        bot.add(btnFileOpen);
+
+        btnFileOpen.addActionListener(e -> {
+            File();
+        });
+        pack();
+        setVisible(true);
+
+        
+        temp2 = new JButton("temp button 2");
+        bot.add(temp2);
+        temp3 = new JButton("temp button 3");
+        bot.add(temp3);
+        temp4 = new JButton("temp button 4");
+        bot.add(temp4);
+        
+        add(bot, BorderLayout.SOUTH);
+
+    }
+    
+    private void File() {
+
+        JFileChooser chooser = new JFileChooser();
+
+        if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            File f = chooser.getSelectedFile();
+            // Next Step: Reading from the File chosen by the user
+        }
+
+    }
+}
