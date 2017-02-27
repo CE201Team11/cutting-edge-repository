@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,7 +21,13 @@ public class ButtonHandler implements ActionListener {
         switch (choice){
 
             case 'A':
-                String test = JOptionPane.showInputDialog("Button 1");
+                //String test = JOptionPane.showInputDialog("Button 1");
+                GUIGraph graphFrame = new GUIGraph();
+                graphFrame.setTitle("Graph Frame");
+                graphFrame.getContentPane().setBackground(Color.lightGray );
+
+                graphFrame.setVisible(true);
+                graphFrame.setSize(800,600);
                 break;
             case 'B':
                 String test2 = JOptionPane.showInputDialog("Button 2");

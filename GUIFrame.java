@@ -6,24 +6,34 @@ import java.awt.*;
  */
 public class GUIFrame extends JFrame {
 
-    JButton temp1, temp2, temp3, temp4;
+    JButton viewGraph, temp2, temp3, temp4;
     JPanel top,mid,bot;
 
     public GUIFrame(){
         top = new JPanel();
-        mid = new JPanel();
-        bot = new JPanel();
+        top.setBackground(Color.darkGray);
 
-        temp1 = new JButton("temp button 1");
-        bot.add(temp1);
+        mid = new JPanel();
+        mid.setBackground(Color.darkGray);
+
+        bot = new JPanel();
+        bot.setBackground(Color.darkGray);
+
+
+        viewGraph = new JButton("View Graph");
+        viewGraph.setBackground(Color.white);
+        bot.add(viewGraph);
         temp2 = new JButton("temp button 2");
+        temp2.setBackground(Color.white);
         bot.add(temp2);
         temp3 = new JButton("temp button 3");
+        temp3.setBackground(Color.white);
         bot.add(temp3);
         temp4 = new JButton("temp button 4");
+        temp4.setBackground(Color.white);
         bot.add(temp4);
 
-        temp1.addActionListener(new ButtonHandler(this, 'A'));
+        viewGraph.addActionListener(new ButtonHandler(this, 'A'));
         temp2.addActionListener(new ButtonHandler(this, 'B'));
         temp3.addActionListener(new ButtonHandler(this, 'C'));
         temp4.addActionListener(new ButtonHandler(this, 'D'));
@@ -31,6 +41,7 @@ public class GUIFrame extends JFrame {
         add(bot, BorderLayout.SOUTH);
     }
 
-}
 
-//Stop... Hammertime
+
+
+}
